@@ -1,0 +1,37 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+// Input data
+rl.question("Enter exam hour: ", (examHour) => {
+  rl.question("Enter exam minute: ", (examMinute) => {
+    rl.question("Enter arrival hour: ", (arrivalHour) => {
+      rl.question("Enter arrival minute: ", (arrivalMinute) => {
+        examHour = parseInt(examHour);
+        examMinute = parseInt(examMinute);
+        arrivalHour = parseInt(arrivalHour);
+        arrivalMinute = parseInt(arrivalMinute);
+
+        // Convert both times to minutes since midnight
+        let examTime = examHour * 60 + examMinute;
+        let arrivalTime = arrivalHour * 60 + arrivalMinute;
+        let difference = arrivalTime - examTime;
+
+        if (difference < -30) {
+          console.log("Early");
+          let minutes = Math.abs(difference);
+          console.log(`${minutes} minutes before the start`);
+        } else if (difference >= 0) {
+          console.log("Late");
+          let minutes = Math.abs(difference);
+          console.log(`${minutes} minutes after the start`);
+        } else {
+          console.log("On time");
+        }
+        rl.close();
+      });
+    });
+  });
+});
