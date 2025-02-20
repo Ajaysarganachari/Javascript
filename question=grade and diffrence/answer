@@ -1,0 +1,10 @@
+const arr = [73, 44, 33, 93];
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] >= 38) {
+    let temp = arr[i] + (5 - (arr[i] % 5));
+    if (temp - arr[i] < 3) {
+      arr[i] = temp;
+    }
+  }
+}
+console.log(arr);
