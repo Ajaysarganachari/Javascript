@@ -3,53 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
+    <title>REGISTRATION FORM</title>
 </head>
-<body>
-
-    <h2>User Registration Form</h2>
-    <form id="userForm">
-        Name: <input type="text" id="name"><br><br>
-        Mobile No: <input type="text" id="mobile"><br><br>
-        <button type="button" onclick="validateForm()">Submit</button>
+<body bgcolor="gray">
+    <h2>WHILE LOOP REGISTRATION FORM</h2>
+    <form id="registrationForm" onsubmit="return Validateform()">
+        Name: <input type="text" id="name"><br>
+        Mobile: <input type="text" id="mobile"><br>
+        <input type="submit" value="submit">
     </form>
 
-    <p id="message"></p>
-
     <script>
-        function validateForm() {
+        function Validateform() {
             var name = document.getElementById("name").value;
             var mobile = document.getElementById("mobile").value;
-            var message = document.getElementById("message");
-
-            // Check if fields are not empty
+            
             if (name == "" || mobile == "") {
-                message.innerHTML = "All fields are required!";
-                message.style.color = "red";
+                alert("All fields are required.");
                 return false;
             }
 
-            // Check if name contains only alphabets
-            var nameRegex = /^[A-Za-z\s]+$/;
-            if (!nameRegex.test(name)) {
-                message.innerHTML = "Name should contain only alphabets.";
-                message.style.color = "red";
+            
+            var namePattern = /^[A-Za-z]+$/;
+            if (!name.match(namePattern)) {
+                alert("Name should contain only alphabets.");
                 return false;
             }
 
-            // Check if mobile number is exactly 10 digits
-            var mobileRegex = /^[0-9]{10}$/;
-            if (!mobileRegex.test(mobile)) {
-                message.innerHTML = "Mobile number should be 10 digits long.";
-                message.style.color = "red";
+        
+            var mobilePattern = /^\d{10}$/;
+            if (!mobile.match(mobilePattern)) {
+                alert("Mobile number should be exactly 10 digits.");
                 return false;
             }
 
-            message.innerHTML = "Form Submitted Successfully!";
-            message.style.color = "green";
+            alert("Form submitted successfully.");
             return true;
         }
     </script>
-
 </body>
 </html>
