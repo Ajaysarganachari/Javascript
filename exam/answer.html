@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+    <form id="userForm">
+        Name: <input type="text" id="name"><br><br>
+        Mobile No: <input type="text" id="mobile"><br><br>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mobile").value;
+            var message = document.getElementById("message");
+
+            // Check if fields are not empty
+            if (name == "" || mobile == "") {
+                message.innerHTML = "All fields are required!";
+                message.style.color = "red";
+                return false;
+            }
+
+            // Check if name contains only alphabets
+            var nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(name)) {
+                message.innerHTML = "Name should contain only alphabets.";
+                message.style.color = "red";
+                return false;
+            }
+
+            // Check if mobile number is exactly 10 digits
+            var mobileRegex = /^[0-9]{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                message.innerHTML = "Mobile number should be 10 digits long.";
+                message.style.color = "red";
+                return false;
+            }
+
+            message.innerHTML = "Form Submitted Successfully!";
+            message.style.color = "green";
+            return true;
+        }
+    </script>
+
+</body>
+</html>
