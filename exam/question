@@ -1,0 +1,5 @@
+Write a JavaScript program for accepting name and mobile number from user and
+perform following validation: [20 Marks]
+a) Check all fields should not contain a null value
+b) Check name field contains only alphabets
+c) Mobile No. field should be of 10 digits long.
