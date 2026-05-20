@@ -1,0 +1,17 @@
+Operators in JavaScript
+Definition
+
+Operators are symbols used to perform operations on variables and values.
+
+Example:let score=92;
+if(score>=90&&score<=100){
+    console.log("passed in A grade");
+}else if(score>=70&&score<=89){
+    console.log("passed in B grade");
+}else if(score>=60&&score<=69){
+    console.log("passed in C grade");
+}else if(score>=50&&score<=59){
+    console.log("passed in D grade");
+}else if(score>=0&&score<=49){
+    console.log("Sorry to say you are Failed");
+}
