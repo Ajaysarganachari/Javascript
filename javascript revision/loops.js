@@ -21,6 +21,10 @@ Output
 Definition
 
 The for loop repeats a block of code for a fixed number of times.
+    example=
+    for(i=1;i<+100;i++){
+    console.log("for loop printed 100 times");
+}
 
 2. while Loop
 
