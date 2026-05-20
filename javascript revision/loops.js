@@ -74,4 +74,12 @@ Output
 5
 Definition
 
-The do...while loop executes the code first and then checks the condition.
+The do...while loop executes the code first and then checks the condition
+
+\
+example=
+    let i=5;
+do{
+    console.log("i=",i);
+    i++;
+}while(i<=20);
