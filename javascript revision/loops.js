@@ -83,3 +83,14 @@ do{
     console.log("i=",i);
     i++;
 }while(i<=20);
+
+
+
+for...of Loop
+
+Used to iterate over arrays or strings.
+    example=
+    let str="Sarganachari";
+for(let i of str){
+    console.log("i=",i);
+}
