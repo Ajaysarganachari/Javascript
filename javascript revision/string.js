@@ -19,3 +19,11 @@ console.log(res);
 //replace
 let str5="Hello";
 console.log(str5.replace("H","t"));
+
+
+
+
+example=
+  let fullName=prompt("enter your full name without space");
+let username="@" + fullName + fullName.length;
+console.log(username);
