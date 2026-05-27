@@ -53,3 +53,15 @@ let evenarr=arr.filter((val)=>{
     return val %2===0;
 });
 console.log(evenarr);
+
+
+reduce() Method Definition
+
+The reduce() method in JavaScript is used to reduce an array to a single value by applying a function on each element.
+
+
+  let arr=[1,2,3,4];
+const output=arr.reduce((res,curr)=>{
+    return res+curr;
+});
+console.log(output);
