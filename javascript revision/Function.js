@@ -18,3 +18,10 @@ let arr=["pune","delhi","mumbai","banglore","manglore"];
 arr.forEach((val,idx,arr)=>{
     console.log(val.toUpperCase(),idx,arr);
 });
+
+
+example= square of array
+let arr=[1,2,3,4,5,6,7,8,9,10];
+arr.forEach((arr)=>{
+    console.log(arr*arr);
+});
